@@ -1,8 +1,8 @@
 
 
-var link2 = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
+var maplink = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
 
-d3.json(link2,function(response){
+d3.json(maplink,function(response){
     console.log(response);
     plates = L.geoJSON(response,{  
         style: function(feature){
@@ -22,11 +22,11 @@ d3.json(link2,function(response){
   
 
     
-    var link = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+    var maplink1 = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
  
 
-    d3.json(link,function(data){
+    d3.json(maplink1,function(data){
     console.log(data);
    
     function createCircleMarker(feature,latlng){
